@@ -93,4 +93,64 @@ public class  CalculatorTests
         // Assert 
         Assert.Equal(-3, result); 
     }
+
+    // Check if the number is even: in fact, it is really even
+    [Fact] 
+    public void IsEven() 
+    { 
+        // Arrange 
+        int a = 2; 
+ 
+        // Act 
+        bool result = Calculator.IsEven(a); 
+ 
+        // Assert 
+        Assert.True(result) ;
+    }
+
+    // Check if the number is even: in fact, it is really even(0 is even)
+    [Fact] 
+    public void IsEven_Zero_Return_Yes() 
+    { 
+        // Arrange
+        //0 is even and we expect that the returned result will be true     
+        int a = 0; 
+ 
+        // Act 
+        bool result = Calculator.IsEven(a); 
+ 
+        // Assert 
+        Assert.True(result) ;
+    }
+
+    // Check if the number is even: in fact, it is not even, it is odd
+    [Fact] 
+    public void IsEven_OddNumber_Return_No() 
+    { 
+        // Arrange 
+        //1 is odd and we expect that the returned result will be false
+        int a = 1; 
+ 
+        // Act 
+        bool result = Calculator.IsEven(a); 
+ 
+        // Assert 
+        Assert.False(result) ;
+    }  
+
+    // Check if the number is even: in fact, it is realy even
+    // And it is a negative number, but it will stay an even number
+    [Fact] 
+    public void IsEven_EvenAndNegativeNumber_Return_EvenNumber() 
+    { 
+        // Arrange 
+        // -2 it is an even and negative number, we expect that the returned result will be true
+        int a = -2; 
+ 
+        // Act 
+        bool result = Calculator.IsEven(a); 
+ 
+        // Assert 
+        Assert.True(result) ;
+    }           
 }
