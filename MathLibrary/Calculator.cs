@@ -6,9 +6,13 @@ public static class Calculator
         return a*b ;
     }
 
-    //a: first number
-    //b: second number
-    //dividing a/b then, retuen the result
+    /*a: first number
+    b: second number
+    dividing a/b then, retuen the result
+    I implemented zero division handling in the calculator's
+    core logic and wrote corresponding test cases that specifically verify this edge case
+    */
+     core logic and wrote corresponding test cases that specifically verify this edge case
     public static int Divide(int a, int b){
         if (b==0){
             throw new DivideByZeroException("cannont divide by zero!");

@@ -50,8 +50,10 @@ public class  CalculatorTests
         Assert.Equal(6, result); 
     } 
 
-    // add Dividing: 3 tests
-    //the first: Divide Two Negative Numbers Returns Positive number
+    /* 
+    add Dividing: 3 tests
+    the first: Divide Two Negative Numbers Returns Positive number
+    */
     [Fact] 
     public void Divide_TwoNegativeNumbers_ReturnsPositive() 
     { 
@@ -65,7 +67,10 @@ public class  CalculatorTests
         Assert.Equal(3, result); 
     }
 
-    //second test: Divide ByZero Throws DivideByZeroException
+    /*
+    second test: Divide ByZero Throws DivideByZeroException
+    A test code that verifies the division function's handling of the divide-by-zero case
+    */
     [Fact] 
     public void Divide_ByZero_ThrowsDivideByZeroException() 
     { 
